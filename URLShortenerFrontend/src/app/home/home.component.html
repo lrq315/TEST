@@ -1,0 +1,16 @@
+﻿<div class="p-4">
+    <div class="container">
+        <input [(ngModel)]="long_url" placeholder="please input the long URL">
+        <button (click)="generate_result()">Generate Result</button>
+        <p>{{short_url}}</p>
+    </div>
+
+    <div class="container" >
+        <button (click)="generate_history()">Generate History</button>
+        <ul>
+            <li *ngFor="let item of history_list; index as i">
+              {{item.long_url}} --> {{item.short_url}}
+            </li>
+          </ul>
+    </div>
+</div>
