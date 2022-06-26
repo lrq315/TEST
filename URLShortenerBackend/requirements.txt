@@ -4,4 +4,4 @@ PyMySQL == 0.9.3
 django-cors-headers == 3.2.1
 requests==2.28.0
 PyJWT==2.4.0
-dotenv
+python-dotenv==0.20.0
