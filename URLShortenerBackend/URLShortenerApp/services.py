@@ -12,7 +12,6 @@ class URLShortenerService:
         key = os.getenv('key')
         url = urllib.parse.quote(self.long_url)
         try:
-            import pdb; pdb.set_trace()
             response = requests.get('http://cutt.ly/api/api.php?key={}&short={}'.format(key, url))
             return json.loads(response.text)['url']['shortLink']
         except:
