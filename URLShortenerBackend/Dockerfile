@@ -12,4 +12,4 @@ RUN pip3.7 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simp
 
 COPY ./ /app
 
-EXPORSE 80
+EXPOSE 80
