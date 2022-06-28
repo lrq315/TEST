@@ -5,3 +5,4 @@ django-cors-headers == 3.2.1
 requests==2.28.0
 PyJWT==2.4.0
 python-dotenv==0.20.0
+cryptography==37.0.3
