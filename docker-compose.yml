@@ -1,0 +1,32 @@
+version: '3.9'
+
+
+services:
+  mysql:
+    container_name: URLShortenerMysql
+    image: mysql:8
+    volumes:
+      - ./mysql:/var/lib/mysql
+    env_file:
+      - .env
+    ports:
+      - '3306:3306'
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    container_name: URLShortenerBackend
+    build: ./URLShortenerBackend
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:80"
+    env_file:
+      - .env
+    ports:
+      - '8080:80'
+    depends_on:
+      mysql:
+        condition: service_healthy
