@@ -1,5 +1,6 @@
 /7331804_soapcmd.top_nginx
 */node_modules
+*/mysql
 
 # Django #
 *.log
