@@ -1,6 +1,11 @@
-/7331804_soapcmd.top_nginx
+# ssl certificate
+*/cert
+
+# Angular Dependencies
 */node_modules
-*/mysql
+
+# Mysql Volume
+mysql/
 
 # Django #
 *.log
