@@ -3,6 +3,7 @@
 
 # Angular Dependencies
 */node_modules
+*.angular
 
 # Mysql Volume
 mysql/
