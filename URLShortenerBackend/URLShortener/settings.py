@@ -145,3 +145,5 @@ REST_FRAMEWORK = {
     ]
 
 }
+
+SECURE_SSL_REDIRECT = False
